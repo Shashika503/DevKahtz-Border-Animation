@@ -1,0 +1,61 @@
+@import url('https://fonts.googleapis.com/css2?family=Heebo:wght@500&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #181818;
+}
+
+div {
+    width: 600px;
+    height: 600px;
+    box-shadow: 16px 14px 20px #0000008c;
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+div::before{
+    content: "";
+    background-image: conic-gradient(
+        #f3a642 20deg,
+        transparent 120deg
+    );
+    width: 300%;
+    height: 300%;
+    position: absolute;
+    animation: rotate 2s linear infinite;
+}
+div::after{
+    content: "Dev Kahtz";
+    width: 590px;
+    height: 590px;
+    background: #101010;
+    position: absolute;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #22aaaf;
+    font-size: 96px;
+    font-family: 'Heebo', sans-serif;
+    letter-spacing: 3px;
+    box-shadow: inset 20px 20px 20px #0000008c;
+}
+@keyframes rotate {
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
